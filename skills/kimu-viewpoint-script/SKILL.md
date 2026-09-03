@@ -1,13 +1,13 @@
 ---
-name: kimu-course-ppt-script
-description: 把中文课程长文、音频或转写稿转换为可直接授课、逐页编号的 Kimu 风格 PPT 提词稿。用户要求生成 PPT 文字稿、课程逐页文稿、继续下一章节或转换完整课程时使用。
+name: kimu-viewpoint-script
+description: 把中文课程长文、音频或转写稿提炼为可直接讲授、分段编号的 Kimu 风格观点提词稿。用户要求生成观点大纲、授课提词稿、继续下一章节或转换完整课程时使用。
 ---
 
-# Kimu Course PPT Script
+# Kimu Viewpoint Script
 
-Turn long course material into concise, audience-facing slide copy that Kimu can present directly. Preserve the source's strongest logic while rewriting the expression, removing chatter, and keeping only memory anchors.
+Turn long course material into concise, audience-facing viewpoint prompts that Kimu can present directly. Preserve the source's strongest logic while rewriting the expression, removing chatter, and keeping only memory anchors.
 
-This module can be routed from the Kimu entrypoint or used directly with natural language such as `Kimu PPT 提词稿：把这份课程材料改成逐页授课稿`.
+This module can be routed from the Kimu entrypoint or used directly with natural language such as `Kimu 观点提词稿：把这份课程材料提炼成授课观点大纲`.
 
 ## Load the working standard
 
@@ -83,7 +83,7 @@ Use one case for an easy concept and up to three only when each explains a diffe
 Run:
 
 ```bash
-python3 scripts/validate_ppt_script.py path/to/draft.txt
+python3 scripts/validate_viewpoint_script.py path/to/draft.txt
 ```
 
 Fix every numbering or line-count error. Review warnings for filler phrases and exact repeated lines; keep a repetition only when it is an intentional concept label. Then verify:

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate Kimu-style page-numbered PPT prompter scripts."""
+"""Validate Kimu-style page-numbered viewpoint prompter scripts."""
 
 from __future__ import annotations
 

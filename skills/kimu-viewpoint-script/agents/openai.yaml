@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kimu观点提词稿"
+  short_description: "将长课程内容提炼为可直接讲授、结构清晰的观点提词稿"
+  default_prompt: "使用 $kimu-viewpoint-script，把这份课程材料提炼成简洁、分段编号的观点提词稿。"

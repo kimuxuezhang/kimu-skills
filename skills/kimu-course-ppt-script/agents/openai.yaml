@@ -1,4 +1,0 @@
-interface:
-  display_name: "Kimu课程PPT提词稿"
-  short_description: "将长课程内容压缩为可直接讲授、结构清晰且带页码的PPT提词稿"
-  default_prompt: "使用 $kimu-course-ppt-script，把这份课程材料改成简洁、逐页编号的授课提词稿。"

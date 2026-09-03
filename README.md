@@ -12,7 +12,7 @@ Kimu 工具箱是一组可组合的 Agent Skills。统一入口是 `kimu`，日�
 | `kimu-concept-clarifier` | 概念拆解与边界澄清 |
 | `kimu-business-diagnosis` | 商业问题与商业模式诊断 |
 | `kimu-case-bank` | 案例检索、核验与维护 |
-| `kimu-course-ppt-script` | 课程材料转逐页 PPT 提词稿 |
+| `kimu-viewpoint-script` | 课程材料转观点提词稿 |
 
 ## 一句话安装
 
@@ -50,7 +50,7 @@ Kimu 学习教练：带我系统学习行为经济学。
 Kimu 概念澄清：拆解“个人品牌”这个概念。
 Kimu 商业诊断：帮我检查这个产品的商业模式。
 Kimu 案例库：为这个观点找一个可核验案例。
-Kimu PPT 提词稿：把这份课程材料改成逐页授课稿。
+Kimu 观点提词稿：把这份课程材料提炼成授课观点大纲。
 ```
 
 Codex、Claude Code 等宿主可能额外提供 `$技能名` 或斜杠命令，但这些只是宿主快捷方式，不是 Kimu 的跨平台使用前提。
@@ -60,7 +60,7 @@ Codex、Claude Code 等宿主可能额外提供 `$技能名` 或斜杠命令，�
 仓库发布新版本后，已通过 Skills CLI 安装的用户可运行：
 
 ```bash
-npx -y skills update kimu kimu-chatroom kimu-learning-coach kimu-concept-clarifier kimu-business-diagnosis kimu-case-bank kimu-course-ppt-script -g -y
+npx -y skills update kimu kimu-chatroom kimu-learning-coach kimu-concept-clarifier kimu-business-diagnosis kimu-case-bank kimu-viewpoint-script -g -y
 ```
 
 通过 WorkBuddy 手动上传的用户需要重新下载并覆盖旧版本。
