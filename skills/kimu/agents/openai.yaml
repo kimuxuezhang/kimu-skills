@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kimu 工具箱"
+  short_description: "根据任务结果在六个 Kimu 模块之间选择并直接执行"
+  default_prompt: "使用 $kimu，根据我当前的问题选择最合适的 Kimu 模块并直接开始。"

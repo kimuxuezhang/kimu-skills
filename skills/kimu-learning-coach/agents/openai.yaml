@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kimu 学习教练"
+  short_description: "用讲解、练习和反馈建立持续调整的互动学习路径"
+  default_prompt: "使用 $kimu-learning-coach，带我通过讲解、练习和反馈系统学习这个主题。"

@@ -1,4 +1,0 @@
-interface:
-  display_name: "Kimu案例库"
-  short_description: "集中检索、补充和维护Kimu内容体系使用的真实案例"
-  default_prompt: "Use $kimu-case-bank to find the best verified case for this topic or add a new case from the provided material."

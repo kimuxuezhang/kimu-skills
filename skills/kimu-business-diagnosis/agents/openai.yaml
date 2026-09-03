@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kimu 商业诊断"
+  short_description: "用业务证据定位主要约束，并设计下一项最小验证"
+  default_prompt: "使用 $kimu-business-diagnosis，检查这项业务的主要约束并设计下一项验证。"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kimu 聊天室"
+  short_description: "组织多视角圆桌，让不同立场质询并提炼决策条件"
+  default_prompt: "使用 $kimu-chatroom，围绕当前问题组织多视角圆桌并总结关键分歧。"
