@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kimu课程PPT提词稿"
+  short_description: "将长课程内容压缩为可直接讲授、结构清晰且带页码的PPT提词稿"
+  default_prompt: "Use $kimu-course-ppt-script to turn this course source into a concise, page-numbered PPT prompter script."

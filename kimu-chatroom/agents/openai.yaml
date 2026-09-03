@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kimu Chatroom"
+  short_description: "按话题组织多位专家对话，并由主持人汇总分歧与行动建议"
+  default_prompt: "使用 $kimu-chatroom，为当前话题选择合适的专家视角并开展多角色讨论。"
