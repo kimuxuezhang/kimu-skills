@@ -1,4 +1,4 @@
 interface:
   display_name: "Kimu 概念澄清"
-  short_description: "把模糊词语变成有语境、标准和边界的工作定义"
-  default_prompt: "使用 $kimu-concept-clarifier，澄清这个概念在当前语境中的含义和判断边界。"
+  short_description: "把教培与日常讨论中的模糊词语转成有标准、有边界的工作定义"
+  default_prompt: "使用 $kimu-concept-clarifier，帮我澄清这个教培概念的含义、判断标准和行动边界。"

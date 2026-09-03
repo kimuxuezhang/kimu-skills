@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kimu 教师商业模式诊断"
+  short_description: "诊断教培与知识付费业务的阶段、主要卡点和下一项验证"
+  default_prompt: "使用 $kimu-teacher-business-diagnosis，检查我的课程或知识付费业务处于什么阶段，并找出下一项最小验证。"

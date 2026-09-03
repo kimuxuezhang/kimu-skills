@@ -3,42 +3,42 @@ name: kimu-viewpoint-script
 description: 把中文课程长文、音频或转写稿提炼为可直接讲授、分段编号的 Kimu 风格观点提词稿。用户要求生成观点大纲、授课提词稿、继续下一章节或转换完整课程时使用。
 ---
 
-# Kimu Viewpoint Script
+# Kimu 观点提词稿
 
-Turn long course material into concise, audience-facing viewpoint prompts that Kimu can present directly. Preserve the source's strongest logic while rewriting the expression, removing chatter, and keeping only memory anchors.
+把长课程材料整理成简洁、面向学员、可由 Kimu 直接讲授的观点提词稿。保留原材料中最有价值的逻辑，重写表达，删除闲聊，只留下能够帮助讲者恢复完整讲述的记忆锚点。
 
-This module can be routed from the Kimu entrypoint or used directly with natural language such as `Kimu 观点提词稿：把这份课程材料提炼成授课观点大纲`.
+本模块既可以由 Kimu 主入口调度，也可以直接用自然语言调用，例如：`Kimu 观点提词稿：把这份课程材料提炼成授课观点大纲`。
 
-## Load the working standard
+## 读取工作标准
 
-Read `references/style-rules.md` and `references/examples.md` before drafting. When the source is DOCX, also use the host's document-reading workflow. When the user asks for a PPTX rather than a text prompter script, finish the script first and then use the host's presentation workflow.
+起草前读取 `references/style-rules.md` 和 `references/examples.md`。源文件是 DOCX 时，同时使用宿主的文档读取流程。本模块的交付物仍是文字提词稿；用户需要 PPTX 时，先完成并确认提词稿，再交给宿主的演示文稿工作流。
 
-## Choose the execution mode
+## 选择执行模式
 
-- Default to **segmented mode**: produce one coherent chapter covering about 35–45 minutes, then wait for review.
-- Use **full-course mode** only after the user explicitly chooses it. If the request is ambiguous, ask before processing the whole course.
-- In a continuation, inspect existing drafts and locate the exact source boundary before writing. Do not restart or skip ahead.
-- Prefer a complete teaching unit over an exact timestamp. Stop early or extend modestly when a topic begins or ends near the time boundary, and report the source range.
+- 默认使用**分段模式**：每次完成一个约 35–45 分钟、逻辑完整的章节，然后等待用户检查。
+- 只有用户明确选择时才使用**全课程模式**。请求含糊时，先确认是否要一次处理完整课程。
+- 继续上一段时，先检查已有稿件并定位准确的原文边界，不重新开始，也不跳过材料。
+- 教学单元的完整性优先于精确时长。主题恰好在时间边界附近开始或结束时，可以适度提前结束或延长，并报告本次原文范围。
 
-## Read and filter the source
+## 阅读并筛选材料
 
-1. Read the complete source range needed to understand the argument, not only isolated paragraphs.
-2. Separate the teaching spine from audience questions, exercises, promotion, administration, and casual conversation.
-3. Delete audience chatter and stand-alone questions. Keep a teacher's answer only when it develops a reusable method directly related to the lesson.
-4. Remove repeated explanations, verbal tics, exaggerated claims, unsupported platform folklore, and examples that do not advance the teaching point.
-5. Retain the source's useful causal structure, distinctions, workflows, and difficult-to-replace examples. Rewrite them in Kimu's concise teaching language.
+1. 阅读理解论证所需的完整材料范围，不只截取孤立段落。
+2. 区分教学主线与学员提问、练习、推广、行政通知和现场闲聊。
+3. 删除听众闲聊与孤立问题；只有老师的回答形成了与本课直接相关、可复用的方法时才保留。
+4. 删除重复解释、口头习惯、夸张说法、缺乏证据的平台传言，以及不能推进教学观点的案例。
+5. 保留材料中有价值的因果结构、关键区分、操作流程和难以替代的案例，再用 Kimu 简洁的教学语言重写。
 
-## Build the chapter
+## 建立章节
 
-1. Define one sentence: by the end, what should the learners understand or be able to do?
-2. Identify the chapter's 2–4 cumulative teaching moves.
-3. Give every page one job and one primary claim.
-4. Arrange pages so each creates the need for the next. Add a transition only when the logic would otherwise jump.
-5. Open with the chapter and its core dimensions. Close only when a new synthesis or action is added; do not add a repetitive “这一篇的核心” page.
+1. 用一句话确定：本章结束时，学员应该理解什么或能完成什么。
+2. 找出 2–4 个层层推进的教学动作。
+3. 每页只承担一个任务，并表达一个主要判断。
+4. 排列页面时，让上一页自然产生下一页的需要；只有逻辑会跳跃时才增加过渡。
+5. 开头直接给出章节与核心维度；结尾必须增加新的综合判断或行动，不添加重复的“这一篇的核心”页面。
 
-## Write each page
+## 编写每页
 
-Use this exact shape:
+严格使用下面的结构：
 
 ```text
 【本段P1】
@@ -48,52 +48,52 @@ Use this exact shape:
 必要案例或动作
 ```
 
-- Keep 1–5 visible lines after the page marker; prefer 3–4.
-- Keep only concepts, relationships, judgments, actions, and necessary case facts.
-- Delete subjects, connectors, qualifiers, and summary labels that Kimu can supply naturally while speaking.
-- Use compact phrases when the relationship remains clear. Do not turn every page into a full sentence.
-- Remove non-core words and repeated synonyms before creating another page.
-- Do not expose timing, source-selection notes, production commentary, or internal instructions on audience-facing pages.
+- 页码之后保留 1–5 行可见文字，优先控制在 3–4 行。
+- 只保留概念、关系、判断、动作和必要的案例事实。
+- 删除 Kimu 讲述时可以自然补出的主语、连接词、限定语和总结标签。
+- 关系清楚时使用简短词组，不把每一页都写成完整句子。
+- 增加新页之前，先删除非核心词和重复的近义表达。
+- 面向学员的页面不得出现时长、材料筛选说明、制作备注或内部指令。
 
-## Handle examples
+## 处理案例
 
-Use the selection order from the `kimu-case-bank` skill instead of copying its records:
+使用 `kimu-case-bank` 的选择顺序，不把案例记录复制进本模块：
 
-1. Kimu真实经历、Nova业务或学员案例
-2. 教培与知识IP案例
-3. 自媒体与AI案例
+1. 用户授权读取的私有教师、课程或学员案例
+2. 可公开核验的教培与知识IP案例
+3. 可公开核验的内容、自媒体与AI案例
 4. 公众熟悉且可核实的案例
 5. 明确标注的待补案例
 
-Use one case for an easy concept and up to three only when each explains a different angle. Never invent an experience, result, quote, identity, date, or number. If no suitable case exists, write a concrete placeholder such as:
+简单概念只用一个案例；只有每个案例分别解释不同角度时，才最多使用三个。不得虚构经历、结果、引语、身份、日期或数字。没有合适案例时，写出具体的待补提示，例如：
 
 ```text
 【需要一条Kimu学长关于“低反馈期持续更新”的真实案例】
 ```
 
-## Number pages
+## 编排页码
 
-- Reset to `【本段P1】` when the material forms a clear major chapter.
-- Continue numbering across the whole course block when no meaningful chapter boundary exists.
-- Ask only when the structure genuinely cannot determine which rule applies.
-- Keep page markers in final TXT or Markdown output; they are required for later PPT production.
+- 材料形成清楚的大章节时，从 `【本段P1】` 重新开始。
+- 没有明确章节边界的完整课程板块，沿用连续页码。
+- 只有材料结构确实无法判断时才询问用户。
+- 最终 TXT 或 Markdown 必须保留页码，便于后续制作 PPT，但当前交付物仍是观点提词稿。
 
-## Validate before delivery
+## 交付前验证
 
-Run:
+运行：
 
 ```bash
 python3 scripts/validate_viewpoint_script.py path/to/draft.txt
 ```
 
-Fix every numbering or line-count error. Review warnings for filler phrases and exact repeated lines; keep a repetition only when it is an intentional concept label. Then verify:
+修复所有页码或行数错误。检查口水词和完全重复行的警告；只有重复内容是刻意保留的概念标签时才允许出现。随后确认：
 
-- one page, one teaching job;
-- no important logic gap;
-- no non-core words or oral filler;
-- no unnecessary recap page;
-- examples directly prove the claim;
-- the chapter begins and ends at a coherent boundary;
-- the output can be taught from without reopening the source.
+- 一页只承担一个教学任务；
+- 不存在重要逻辑断点；
+- 没有非核心词和口头填充语；
+- 没有多余的总结页；
+- 案例能够直接证明判断；
+- 章节起止处于完整的逻辑边界；
+- 不重新打开原材料也能依据提词稿完成讲授。
 
-Deliver the TXT or Markdown file, page count, source range, chapter theme, and the next unused source boundary.
+交付 TXT 或 Markdown 文件，并报告页数、原文范围、章节主题和下一段尚未使用的材料边界。

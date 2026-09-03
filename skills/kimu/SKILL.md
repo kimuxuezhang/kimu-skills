@@ -1,6 +1,6 @@
 ---
 name: kimu
-description: Kimu 工具箱的统一入口，根据用户想得到的结果，在专家讨论、互动学习、概念澄清、商业诊断、案例库和观点提词稿之间选择合适模块。用户输入“Kimu：”、第一次使用工具箱或不知道下一步时使用。
+description: Kimu 工具箱的统一入口，根据用户想得到的结果，在历史教育家优先的专家讨论、主题或读书学习、概念澄清、教师商业模式诊断、案例库和观点提词稿之间选择合适模块。用户输入“Kimu：”、第一次使用工具箱或不知道下一步时使用。
 ---
 
 # Kimu 工具箱
@@ -15,17 +15,17 @@ Kimu 是工具箱的入口和调度者。先理解用户真正要完成的事情
 Kimu：{用户的问题或任务}
 ```
 
-用户也可以直接说「Kimu 聊天室」「Kimu 学习教练」「Kimu 概念澄清」「Kimu 商业诊断」「Kimu 案例库」或「Kimu 观点提词稿」。美元符号、斜杠命令或按钮只属于宿主的可选快捷方式，不是使用前提。
+用户也可以直接说「Kimu 聊天室」「Kimu 学习教练」「Kimu 概念澄清」「Kimu 教师商业模式诊断」「Kimu 案例库」或「Kimu 观点提词稿」。美元符号、斜杠命令或按钮只属于宿主的可选快捷方式，不是使用前提。
 
 ## 模块地图
 
 | 用户想得到的结果 | 模块 |
 |---|---|
-| 看见几套真正不同的观点，并比较分歧 | `kimu-chatroom` |
-| 持续学习一个主题，通过练习逐步掌握 | `kimu-learning-coach` |
-| 弄清一个词在当前语境里究竟指什么 | `kimu-concept-clarifier` |
-| 找出业务系统的主要卡点和下一项验证 | `kimu-business-diagnosis` |
-| 找到、核验或收录可追溯案例 | `kimu-case-bank` |
+| 用多视角比较分歧；教培话题优先邀请历史教育家 | `kimu-chatroom` |
+| 持续学习一个主题，或通过共读逐步读懂一本书 | `kimu-learning-coach` |
+| 弄清一个词在当前语境里究竟指什么；尤其是教培与知识付费中的模糊用语 | `kimu-concept-clarifier` |
+| 找出教师、课程或知识付费业务的阶段、主要卡点和下一项验证 | `kimu-teacher-business-diagnosis` |
+| 从公共可核验层与本机私有层查找、核验或收录案例 | `kimu-case-bank` |
 | 把长课程材料提炼成可直接讲授的观点提词稿 | `kimu-viewpoint-script` |
 
 ## 路由协议
@@ -43,7 +43,8 @@ Kimu：{用户的问题或任务}
 - 已有完整课程材料并明确要观点提词稿时，直接进入观点提词稿。
 - 用户明确要观点交锋时，不把任务改成单一分析。
 - 用户要形成长期能力时，不用一次性答案代替互动学习。
-- 商业问题已经足够具体时，进入商业诊断，不先写课程。
+- 用户点名一本书并希望系统学习时，进入学习教练的读书学习模式。
+- 教师、课程或知识付费商业问题已经足够具体时，进入教师商业模式诊断，不先写课程。
 
 仍无法区分时，只问一个会改变路由选择的问题。
 
@@ -52,7 +53,7 @@ Kimu：{用户的问题或任务}
 - [Kimu 聊天室](../kimu-chatroom/SKILL.md)
 - [Kimu 学习教练](../kimu-learning-coach/SKILL.md)
 - [Kimu 概念澄清](../kimu-concept-clarifier/SKILL.md)
-- [Kimu 商业诊断](../kimu-business-diagnosis/SKILL.md)
+- [Kimu 教师商业模式诊断](../kimu-teacher-business-diagnosis/SKILL.md)
 - [Kimu 案例库](../kimu-case-bank/SKILL.md)
 - [Kimu 观点提词稿](../kimu-viewpoint-script/SKILL.md)
 

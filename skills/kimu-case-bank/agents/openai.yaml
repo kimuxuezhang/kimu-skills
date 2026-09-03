@@ -1,4 +1,4 @@
 interface:
-  display_name: "Kimu案例库"
-  short_description: "集中检索、补充和维护Kimu内容体系使用的真实案例"
-  default_prompt: "使用 $kimu-case-bank，为这个主题查找最合适的可核验案例，或从我提供的材料中收录新案例。"
+  display_name: "Kimu 案例库"
+  short_description: "分开管理公共可核验案例与本机私有教师、课程和学员案例"
+  default_prompt: "使用 $kimu-case-bank，为这个主题检索公共与私有案例；收录新材料时先判断应进入哪一层。"
